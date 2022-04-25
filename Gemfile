@@ -60,3 +60,8 @@ gem 'kaminari'
 
 gem 'devise'
 gem 'devise-i18n'
+gem 'letter_opener_web'
+
+gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
