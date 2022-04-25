@@ -54,3 +54,11 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'carrierwave'
+
+gem 'i18n_generators'
+gem 'net-smtp'
+# ついでに以下の2つも追加しておく方が良さそう
+gem 'net-imap'
+gem 'net-pop'
+
+gem 'debug'
