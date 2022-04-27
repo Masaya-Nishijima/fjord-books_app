@@ -31,6 +31,22 @@
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :profile %><br />
+    <%= f.text_field :profile, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, autofocus: true %>
+  </div>
+
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
