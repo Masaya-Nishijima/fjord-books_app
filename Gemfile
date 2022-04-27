@@ -65,3 +65,5 @@ gem 'letter_opener_web'
 gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
+
+gem 'erd'
