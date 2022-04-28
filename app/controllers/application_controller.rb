@@ -11,18 +11,4 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[zip address profile])
     devise_parameter_sanitizer.permit(:account_update, keys: %i[zip address profile])
   end
-
-  # private
-
-  # def configure_permitted_parameters
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:profile])
-  # end
-
-  # protected
-
-  # def configure_permitted_parameters
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:profile])
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:address])
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:zip])
-  # end
 end
