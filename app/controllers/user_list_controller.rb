@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class UserListController < ApplicationController
   def index
     @users = User.all
   end
 
   def show
-    @user = User.all.select { |user| user['email'] == params['id'] }[0]
+    @user = User.all.find { |user| user['email'] == params['id'] }
   end
 end
