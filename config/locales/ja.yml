@@ -209,10 +209,6 @@ ja:
     common:
       show: 詳細
       edit: 編集
-      update: 更新
-      too_short: 文字以上で入力
-      leave_blank_if_you_don't_want_to_change_it: 変更したくない場合は空白のままにします
-      we_need_your_current_password_to_confirm_your_changes: 変更を確認するには、現在のパスワードが必要です
       destroy: 削除
       new: 新規作成
       back: 戻る
