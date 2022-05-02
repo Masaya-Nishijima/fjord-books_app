@@ -1,0 +1,17 @@
+ja:
+  book_msg:
+    created: 新規作成に成功しました。 # add
+    updated: 編集に成功しました。 # add
+    destroyed: 削除に成功しました。 # add
+  activerecord:
+    models:
+      book: 本
+
+    attributes:
+      book:
+        author: 著者
+        memo: メモ
+        picture: 写真
+        title: タイトル
+        new: 新しい本 # add
+        editing: 編集中の本 # add
