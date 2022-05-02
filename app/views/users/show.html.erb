@@ -48,14 +48,11 @@
    <% end %>
  </p>
  
- <div class="ml-3 mb-3 card w-100">
-   <div class="d-flex">
-     <%= link_to follows_user_path(@user) do %>
-     <h6>フォロー<%= @following_users.count %></h6>
-     <% end %>&nbsp;&nbsp;
-     <%= link_to followers_user_path(@user) do %>
-     <h6>フォロワー<%= @follower_users.count %></h6>
-     <% end %>
-   </div>
+ <div >
+  <%= link_to follows_user_path(@user) do %>
+   <h6>フォロー<%= @following_users.count %></h6>
+  <% end %>&nbsp;&nbsp;
+  <%= link_to followers_user_path(@user) do %>
+    <h6>フォロワー<%= @follower_users.count %></h6>
+  <% end %>
  </div>
- <div class=" row justify-content-center">
