@@ -1,0 +1,8 @@
+<h1 class="font-weight-normal mt-5 mb-5">フォロワー一覧</h1>
+
+<% @users.each do |user| %>
+  <%= link_to user_path(user) do %>
+    <p ><%= user.email %></p>
+  <% end %>
+<% end %>
+<%= paginate @users %>
