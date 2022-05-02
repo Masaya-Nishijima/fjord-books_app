@@ -37,3 +37,25 @@
   <%= link_to t('views.common.edit'), edit_user_registration_path %> |
 <% end %>
 <%= link_to t('views.common.back'), users_path %>
+
+ <p class="d-flex justify-content-end">
+   <% if current_user != @user %>
+   <% if current_user.following?(@user) %>
+   <%= link_to 'フォロー外す', user_friendships_path(@user.id), method: :delete, class: "btn-sm btn-danger" %>
+   <% else %>
+   <%= link_to 'フォローする', user_friendships_path(@user.id), method: :POST, class:"btn-sm btn-success" %>
+   <% end %>
+   <% end %>
+ </p>
+ 
+ <div class="ml-3 mb-3 card w-100">
+   <div class="d-flex">
+     <%= link_to follows_user_path(@user) do %>
+     <h6>フォロー<%= @following_users.count %></h6>
+     <% end %>&nbsp;&nbsp;
+     <%= link_to followers_user_path(@user) do %>
+     <h6>フォロワー<%= @follower_users.count %></h6>
+     <% end %>
+   </div>
+ </div>
+ <div class=" row justify-content-center">
