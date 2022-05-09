@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'books#index'
-  get 'user_list/index', to: 'user_list#index'
-  get 'user_list/:id', to: 'user_list#show'
+  resources 'user_list'
   devise_for :users
   resources :books
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
