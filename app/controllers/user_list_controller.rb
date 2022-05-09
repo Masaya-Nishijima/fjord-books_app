@@ -6,6 +6,6 @@ class UserListController < ApplicationController
   end
 
   def show
-    @user = User.all.find { |user| user['email'] == params['id'] }
+    @user = User.all.find(params[:id])
   end
 end
