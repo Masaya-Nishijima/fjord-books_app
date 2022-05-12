@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= Report.model_name.human + Report.human_attribute_name(:name) + ':'%></strong>
   <%= @report.name %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong><%= Report.human_attribute_name(:body) + ':' %></strong>
   <%= @report.body %>
 </p>
 
