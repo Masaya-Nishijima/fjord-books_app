@@ -10,6 +10,8 @@
   <%= @report.body %>
 </p>
 
+<%= render '/comment_show', send_to: @report %>
+
 <%= render '/comment_form', send_to: @report %>
 
 <%= link_to 'Edit', edit_report_path(@report) %> |
