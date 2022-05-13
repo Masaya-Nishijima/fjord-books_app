@@ -27,7 +27,7 @@
 
 <p>
   <strong><%= User.human_attribute_name(:avatar) %>:</strong>
-  <%= @user.resize_avatar %>
+  <%= resize_image_tag(@user.avatar, '100x100') %>
 </p>
 
 <% if current_user == @user %>
