@@ -44,11 +44,7 @@ class ReportsController < ApplicationController
   # DELETE /reports/1 or /reports/1.json
   def destroy
     @report.destroy
-
-    respond_to do |format|
-      format.html { redirect_to reports_url, notice: 'Report was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to reports_url, notice: 'Report was successfully destroyed.'
   end
 
   private
@@ -64,8 +60,7 @@ class ReportsController < ApplicationController
   end
 
   def ensure_user
-    @reports = current_user.reports
-    @report = @reports.find_by(id: params[:id])
-    redirect_to new_report_path unless @report
+    return if @report.user == current_user
+    redirect_to new_report_path
   end
 end
