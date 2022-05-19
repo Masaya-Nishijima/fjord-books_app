@@ -29,7 +29,6 @@ class ReportsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-
   end
 
   # PATCH/PUT /reports/1 or /reports/1.json
@@ -61,6 +60,7 @@ class ReportsController < ApplicationController
 
   def ensure_user
     return if @report.user == current_user
+
     redirect_to new_report_path
   end
 end
