@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
       end
     @comment.send_to_type = send_to[:type]
     @comment.send_to_id = send_to[:id]
-    @comment.save
+    @comment.save!
     redirect_to "/#{send_to[:type].downcase}s/#{send_to[:id]}", notice: 'Comment was successfully created.'
   end
 
