@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to "/#{send_to[:type].downcase}s/#{send_to[:id]}", notice: 'Comment was successfully created.'
     else
-      redirect_to '/'
+      render :new
     end
   end
 
