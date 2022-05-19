@@ -2,8 +2,7 @@
 
 class CommentsController < ApplicationController
   def create
-    @comment = Comment.new(comment_params)
-    @comment.user_id = current_user.id
+    @comment = current_user.comments.build(comment_params)
     send_to =
       if !params['report_id'].nil?
         { type: 'Report', id: params['report_id'].to_i }

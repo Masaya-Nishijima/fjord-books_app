@@ -22,8 +22,7 @@ class ReportsController < ApplicationController
 
   # POST /reports or /reports.json
   def create
-    @report = Report.new(report_params)
-    @report.user_id = current_user.id
+    @report = current_user.reports.build(report_params)
 
     if @report.save
       redirect_to report_url(@report), notice: 'Report was successfully created.'
