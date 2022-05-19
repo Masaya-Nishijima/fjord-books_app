@@ -12,6 +12,7 @@ ja:
         memo: メモ  #g
         picture: 画像  #g
         title: 題名  #g
+        created_at: 投稿時間
       user:
         name: 氏名
         postal_code: 郵便番号
@@ -21,6 +22,8 @@ ja:
       report:
         name: タイトル
         body: 本文
+        created_at: 投稿時間
       comment:
         comment: コメント
         send_to: 送り先 # 未使用の予定
+        created_at: 投稿時間
